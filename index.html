@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智慧体育 & 智慧体测标讯汇总（2026.03.01–07.07）</title>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --card-bg: #ffffff;
+    --border: #e8e4dd;
+    --text: #33302b;
+    --text-secondary: #6b6560;
+    --accent: #b8956a;
+    --accent-light: #f5ede0;
+    --tag-bid: #e8f0e8;
+    --tag-bid-text: #4a7c4f;
+    --tag-win: #faf0e5;
+    --tag-win-text: #b8753a;
+    --tag-intent: #e5eefa;
+    --tag-intent-text: #4a6a9a;
+    --gradient-warm: linear-gradient(135deg, #faf6f0 0%, #f5ede0 100%);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1500px; margin: 0 auto; }
+  
+  /* header */
+  .header {
+    background: var(--gradient-warm);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .header h1 { 
+    font-size: 26px; font-weight: 700; color: var(--text);
+    letter-spacing: 0.02em; margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px; color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+  .stats-row {
+    display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+  }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 32px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+  /* summary cards */
+  .highlight-boxes {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px;
+  }
+  .hl-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px;
+  }
+  .hl-card h3 { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; font-weight: 500; }
+  .hl-card .val { font-size: 18px; font-weight: 700; }
+  .hl-card .sub { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+  /* table */
+  .table-wrapper {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden; overflow-x: auto;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    background: var(--gradient-warm); padding: 14px 12px;
+    text-align: left; font-weight: 600; font-size: 12px;
+    color: var(--text-secondary); text-transform: uppercase;
+    letter-spacing: 0.04em; white-space: nowrap;
+    border-bottom: 2px solid var(--border);
+  }
+  tbody td {
+    padding: 13px 12px; border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:hover { background: #fdfaf5; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* tags */
+  .tag {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .tag-招标公告 { background: #e8f0e8; color: #4a7c4f; }
+  .tag-中标公告 { background: #faf0e5; color: #b8753a; }
+  .tag-采购意向 { background: #e5eefa; color: #4a6a9a; }
+  .tag-竞争性磋商 { background: #f5efe5; color: #8a6a3a; }
+  .tag-征集公告 { background: #f0eef5; color: #6a5a8a; }
+  .tag-竞价公告 { background: #e5f5f0; color: #3a8a6a; }
+
+  .title-cell { font-weight: 500; max-width: 320px; }
+  .title-cell a { color: var(--text); text-decoration: none; }
+  .title-cell a:hover { color: var(--accent); text-decoration: underline; }
+  .amount { font-weight: 600; color: var(--text); white-space: nowrap; }
+  .amount-large { color: #c0392b; }
+  .source-tag { font-size: 11px; color: var(--text-secondary); white-space: nowrap; }
+  .kw { font-size: 10px; padding: 1px 7px; border-radius: 6px; background: #f5f0e8; color: #8a7040; white-space: nowrap; margin-right: 3px; }
+
+  .footer { text-align: center; padding: 24px; color: var(--text-secondary); font-size: 12px; }
+  .date-sep { background: #faf8f5; font-weight: 700; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
+  .date-sep td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+
+  @media (max-width: 768px) {
+    .header { padding: 24px 20px; }
+    .header h1 { font-size: 20px; }
+    .stats-row { gap: 20px; }
+    .stat-num { font-size: 24px; }
+    table { font-size: 12px; }
+    thead th, tbody td { padding: 10px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>智慧体育 & 智慧体测 · 标讯汇总</h1>
+  <div class="subtitle">数据来源：中国政府采购网、各省市公共资源交易平台、微信公众号、行业媒体等<br>时间范围：2026年3月1日 — 2026年7月3日 | 生成日期：2026-07-03</div>
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-num">120</div><div class="stat-label">标讯总数</div></div>
+    <div class="stat-item"><div class="stat-num">72</div><div class="stat-label">招标/采购公告</div></div>
+    <div class="stat-item"><div class="stat-num">48</div><div class="stat-label">中标/成交公告</div></div>
+    <div class="stat-item"><div class="stat-num">¥14,056万+</div><div class="stat-label">已披露预算/中标总额</div></div>
+  </div>
+</div>
+
+<!-- Key Highlights -->
+<div class="highlight-boxes">
+  <div class="hl-card">
+    <h3>最大单笔中标</h3>
+    <div class="val">¥2,487万</div>
+    <div class="sub">中文在线&天喻教育 · 鄂尔多斯东胜区教体局数字智慧化设备采购</div>
+  </div>
+  <div class="hl-card">
+    <h3>最大单笔招标</h3>
+    <div class="val">¥1,230万</div>
+    <div class="sub">东莞市2026年智能体测项目系统技术服务采购</div>
+  </div>
+  <div class="hl-card">
+    <h3>最活跃地区</h3>
+    <div class="val">广东（6条）</div>
+    <div class="sub">深圳、东莞、茂名等地学校及教育局采购活跃</div>
+  </div>
+  <div class="hl-card">
+    <h3>核心中标供应商</h3>
+    <div class="val" style="font-size:14px;">好滴信息科技 · 中移系统集成 / 中国广电四川 / 上海领感 / 中文在线·天喻</div>
+    <div class="sub">好滴信息科技（广州）中标东莞1,230万大单（实付659.6万），运营商+专业品牌双层格局持续</div>
+  </div>
+</div>
+
+<!-- Table -->
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+  <th>发布时间</th>
+  <th>标讯标题</th>
+  <th>采购单位</th>
+  <th>类型</th>
+  <th>预算/中标金额</th>
+  <th>地区</th>
+  <th>发布平台</th>
+  <th>项目简介</th>
+  <th>原文链接</th>
+</tr>
+</thead>
+<tbody><!-- ====== 2026-07-07 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年7月7日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-06</td>
+  <td class="title-cell"><b>双柏县第一中学智慧体育设备采购项目公开招标公告 🆕</b></td>
+  <td>双柏县第一中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥95万</td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网云南分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备一批，合同签订20日历天完成供货安装调试培训验收。专门面向中小企业。投标截止：7/27 09:00。</td>
+  <td><a href="https://www.ztgxzb.cn/class2/494652.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-07</td>
+  <td class="title-cell"><b>上海市经济管理学校2026年智慧操场成交结果公告 ⭐</b></td>
+  <td>上海市经济管理学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">约¥20万</td>
+  <td>上海</td>
+  <td class="source-tag">采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">⭐6/22竞争性磋商→7/1成交。成交详情需注册查看。</td>
+  <td><a href="https://www.chinabidding.cn/zbgs/U-vz28Qrk.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07初</td>
+  <td class="title-cell">永安市第三中学初中校阳光智慧体育设备采购项目询价 🆕</td>
+  <td>永安市第三中学初中校</td>
+  <td><span class="tag tag-竞价公告">竞价公告</span></td>
+  <td class="amount">待确认</td>
+  <td>福建</td>
+  <td class="source-tag">采招网/招标采购导航网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">阳光智慧体育设备采购询价公告，福建久和工程咨询代理。从6/2方案征集→7月询价。</td>
+  <td><a href="https://www.bidcenter.com.cn/zhaobiao/zbkeyw-102601-0-1.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<!-- 补录 -->
+<tr>
+  <td style="white-space:nowrap">2026-06-29</td>
+  <td class="title-cell"><b style="color:#c0392b">曲靖市第二中学（初中部）智慧体育建设项目公开招标 ⭐补录·百万级</b></td>
+  <td>曲靖市第二中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount" style="color:#c0392b"><b>¥140.9万（智慧体育标项）</b></td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网云南分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">⭐补录。6/29发布此前遗漏。总预算¥205.9万分两标项：智慧体育¥140.9万⭐+数智安防¥65万。7/21截止。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260629_26835286.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell"><b style="color:#c0392b">武汉柏景湾学校AI智慧体育+心理咨询室器材采购 ⭐补录·百万级·今日截止⚠️</b></td>
+  <td>武汉市东西湖区柏景湾学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount" style="color:#c0392b"><b>¥167.94万</b></td>
+  <td>湖北</td>
+  <td class="source-tag">中国政府采购网湖北分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">⭐补录。6/15发布此前遗漏，7/7今日截止⚠️。7/5更正采购文件。新建校AI智慧体育+心理咨询室器材采购，专门面向中小企业。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260615_26753735.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-29</td>
+  <td class="title-cell">盐城市明达初级中学操场围墙护栏改造及智慧体育设施建设（二次）补录</td>
+  <td>盐城市明达初级中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥14.95万</td>
+  <td>江苏</td>
+  <td class="source-tag">盐城市亭湖区人民政府网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">补录。6/29发布二次招标，招标控制价¥14.95万含围墙护栏改造+智慧体育设施建设。7/10截止。</td>
+  <td><a href="https://www.tinghu.gov.cn/art/2026/6/29/art_20048_4434804.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-07-06 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年7月6日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-06</td>
+  <td class="title-cell"><b>芜湖市天门小学AI智慧体育设备采购信息公告 🆕</b></td>
+  <td>芜湖市天门小学</td>
+  <td><span class="tag tag-竞价公告">竞价公告</span></td>
+  <td class="amount">¥16万</td>
+  <td>安徽</td>
+  <td class="source-tag">芜湖经开区管委会</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">采购AI智慧体育设备，含运输、安装、调试、培训、质保3年。要求供应商近三年AI体测案例。最低评标价法。报价截止：7/10。</td>
+  <td><a href="https://weda.wuhu.gov.cn/zfcg/bzjtfgg/18543549.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-06</td>
+  <td class="title-cell"><b>河北省体育局运动技术学校智慧教学建设项目中标公告 🔷</b></td>
+  <td>河北省体育局运动技术学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥108.74万</td>
+  <td>河北</td>
+  <td class="source-tag">河北省公共资源交易中心</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>🔷辅助</b>。中标单位：鸿业志美科技有限公司。采购录播主机、4K教师摄像机(seewo)等智慧教学设备。智慧体育关联度低。</td>
+  <td><a href="http://szj.hebei.gov.cn/hbjyzx/jydt/001002/001002001/001002001003/20260706/4153352b-5004-4f3c-8cf7-34f7423fc7fc.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-07-04 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年7月4日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-04</td>
+  <td class="title-cell"><b>绵阳市2026体育中考智能化测试服务采购合同公示 ✅追踪完成</b></td>
+  <td>绵阳市教育和体育局</td>
+  <td><span class="tag tag-中标公告">合同公示</span></td>
+  <td class="amount">¥39.6万/年</td>
+  <td>四川</td>
+  <td class="source-tag">乙方宝</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>✅追踪链路完成</b>。体育中考智能化测试服务，含体育云平台+测试系统+设备+技术支撑。覆盖约5.04万考生。合同一年一签，共两年。7/4签约。</td>
+  <td><a href="https://www.yfbzb.com/inviteBid/detail/20260704_611167525.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-07-03 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年7月3日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-03</td>
+  <td class="title-cell"><b>黄冈中学附属小学智慧体育设备及体育器材采购竞争性磋商公告 🆕</b></td>
+  <td>黄冈市黄州区教育局（黄冈中学附属小学）</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">¥43.85万</td>
+  <td>湖北</td>
+  <td class="source-tag">中国政府采购网湖北分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">黄冈中学附属小学采购智慧体育设备+体育器材一批。专门面向中小微企业。45日供货安装调试验收交付。远程开标。响应截止：7/15。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202607/t20260703_26869077.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-03</td>
+  <td class="title-cell"><b>两江新区蔡家智慧湾区生态公园增设体育场地及设施采购中标公告 🔷</b></td>
+  <td>重庆市两江新区体育事业发展中心</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥179.36万</td>
+  <td>重庆</td>
+  <td class="source-tag">中国政府采购网重庆分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>🔷辅助</b>。中标单位：重庆智慧体育发展有限公司。竞争性谈判方式采购公园增设体育场地及设施。智能化程度需确认。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/cjgg/202607/t20260703_26869762.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-03</td>
+  <td class="title-cell"><b>成都市少城小学AI智慧体育运动项目成交结果公告 ⭐追踪完成</b></td>
+  <td>成都市少城小学</td>
+  <td><span class="tag tag-中标公告">成交公告</span></td>
+  <td class="amount">—</td>
+  <td>四川</td>
+  <td class="source-tag">采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>⭐此前6/23废标后重新成交</b>。成交供应商和金额需注册查看。废标→重新成交，推进意愿强烈。全链路追踪完成。</td>
+  <td><a href="https://www.chinabidding.cn/zbgs/U-vzfwzRX.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-03</td>
+  <td class="title-cell"><b>广安市广安区东方小学校2026年智慧体育采购项目询价公告 🆕</b></td>
+  <td>广安市广安区东方小学校</td>
+  <td><span class="tag tag-竞价公告">竞价公告</span></td>
+  <td class="amount">¥4.86万</td>
+  <td>四川</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">微型智慧体育采购项目。询价方式招标，最低报价者中选。报名截止7/7。合同签订后一个月内完成。</td>
+  <td><a href="https://mp.weixin.qq.com/s?__biz=MzI1MDY3MTY2Ng==&mid=2247776279&idx=1&sn=778520e71fb3603f05eafa18fb49adc3" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 补录项目 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月（补录）</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell"><b>石家庄第四十二中学初中部中考体育电子测试设备采购项目公开招标 🆕补录</b></td>
+  <td>石家庄第四十二中学初中部</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥86万</td>
+  <td>河北</td>
+  <td class="source-tag">中国政府采购网河北分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>AI智慧体育训测系统+全域数据中心+AI助教轻应用</b>。含引体向上、50/100米跑、800/1000米跑测试设备、户外AI多合一设备3台、数据查询系统等。双盲评审。投标截止：7/21。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260625_26813773.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-14</td>
+  <td class="title-cell"><b>曲靖市第二小学校园智慧体育设施设备采购项目公开招标 ⭐补录</b></td>
+  <td>曲靖市第二小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount" style="color:#c0392b;font-weight:700">¥183万</td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网云南分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>⭐百万级补录</b>。校园智慧体育设施设备采购，核心产品为室外AI体育教学智能终端。投标截止7/6⚠️今日截止。此前遗漏补录。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260614_26746958.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-07-02 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年7月2日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-02</td>
+  <td class="title-cell"><b>深圳大学附属中学智慧体育项目公开招标公告 ⭐🆕</b></td>
+  <td>深圳大学附属中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount" style="color:#c0392b;font-weight:700">¥95万</td>
+  <td>广东</td>
+  <td class="source-tag">深大附中官网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>市直属重点中学</b>。智慧体育体系建设，含AI体育教学、体测、训练数据管理。综合评分法，线下招标。投标截止：2026-07-13。</td>
+  <td><a href="http://www.sdsyfz.edu.cn/articleDetail/48/3493.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-02</td>
+  <td class="title-cell"><b>青田县贵岙乡文体旅共富营地项目（含智慧体育设施）采购意向 🆕</b></td>
+  <td>青田县贵岙乡人民政府</td>
+  <td><span class="tag tag-采购意向">采购意向</span></td>
+  <td class="amount">¥410万(总)</td>
+  <td>浙江</td>
+  <td class="source-tag">乙方宝/浙江政府采购</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">文体旅融合项目，含智慧体育设施采购。提升文体中心、改造匹克球场、美好生活中心。预计2026年7-8月采购。</td>
+  <td><a href="https://www.yfbzb.com/procurement-intention/detail/page/466995506628263936.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+
+<!-- ====== 2026-07-01 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年7月1日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-01</td>
+  <td class="title-cell"><b>松滋市八宝镇八宝小学智慧体育教学、测试设备采购竞争性磋商公告 🆕</b></td>
+  <td>松滋市八宝镇八宝小学</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">¥64.98万</td>
+  <td>湖北</td>
+  <td class="source-tag">中国政府采购网湖北分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育教学、测试设备采购，含安装、调试、培训。合同签订后30天内完成。小微企业价格扣除优惠10%。响应截止：2026-07-14。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202607/t20260701_26848877.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-01</td>
+  <td class="title-cell"><b>南丰县琴湖小学智慧体育设备等采购竞争性谈判公告 🆕</b></td>
+  <td>南丰县琴湖小学</td>
+  <td><span class="tag tag-招标公告">竞争性谈判</span></td>
+  <td class="amount">¥34万</td>
+  <td>江西</td>
+  <td class="source-tag">江西省公共资源交易平台</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备1批，30天安装交付。不见面开标系统线上进行，供应商无需到场。响应截止：2026-07-10（即将截止）。</td>
+  <td><a href="https://www.jxsggzy.cn/jyxx/002006/002006001/20260701/aaa3aa44-f7bb-4f61-bb35-df9fb467af97.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-01</td>
+  <td class="title-cell"><b>闽侯县实验小学智慧体育设备采购需求调研公告 🆕</b></td>
+  <td>闽侯县实验小学</td>
+  <td><span class="tag tag-征集公告">征集公告</span></td>
+  <td class="amount">¥29万</td>
+  <td>福建</td>
+  <td class="source-tag">闽侯县人民政府/教育局</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">校园AI智慧操场配套智能化体育设备。AI视觉识别无穿戴检测、阳光跑无感打卡、数据云端留存。方案提交截止：2026-07-13。</td>
+  <td><a href="https://www.minhou.gov.cn/xjwz/zwgk/zdlyxxgk/jydt/zbgg/202607/t20260701_5341492.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-07-01</td>
+  <td class="title-cell"><b>晋安区智慧教育建设项目二期（含智慧体育模块）方案征集公告 🆕</b></td>
+  <td>福州市晋安区教育局</td>
+  <td><span class="tag tag-征集公告">征集公告</span></td>
+  <td class="amount">—</td>
+  <td>福建</td>
+  <td class="source-tag">福州市晋安区人民政府</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">区域级智慧教育综合项目，含教育评价系统、人机对话耳机、智慧体育、互动教室四大模块。智慧体育为关键模块之一。</td>
+  <td><a href="https://www.fzja.gov.cn/xjwz/ztzl/jy/tzgg/202607/t20260702_5341674.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-30</td>
+  <td class="title-cell"><b>中卫市第三中学中考体育机考增补项目智能化测试系统采购招标公告 🔶补录</b></td>
+  <td>中卫市第三中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>宁夏</td>
+  <td class="source-tag">宁夏教育云/招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>中考体育机考增补</b>。含智慧体育平台、I型体育仓、智慧操场田径站、人脸识别跳绳等。专门面向中小企业。30天完成。投标截止：2026-07-21。</td>
+  <td><a href="https://ningxia.zhaobiao.cn/bidding_v_760f2d9195970f5c8983bd2a8da981ac.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<!-- ====== 2026-06-30 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月30日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-30</td>
+  <td class="title-cell"><b>永仁县第一中学智慧体育设备采购项目公开招标公告 🆕</b></td>
+  <td>云南省永仁县第一中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥95万</td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网云南分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>楚雄州县域中学新项目</b>。采购智慧体育设备一批，专门面向中小企业，无需投标保证金。20日历天完成供货安装调试培训验收。投标截止：2026-07-21。代理：云南九边项目管理有限公司。</td>
+  <td><a href="https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260630_26845419.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-30</td>
+  <td class="title-cell"><b>南宁市第十四中学AI智慧体育系统采购竞价公告 🆕</b></td>
+  <td>南宁市第十四中学</td>
+  <td><span class="tag tag-竞价公告">竞价公告</span></td>
+  <td class="amount">¥16万</td>
+  <td>广西</td>
+  <td class="source-tag">广西政府采购云平台/乙方宝</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>恒鸿达品牌全系AI体育</b>。广西政府采购云平台电子卖场竞价。含AI体育训练考核分析系统、AI阳光跑设备(HOD-A350-YP)、AI数字体育一体机(HOD-A610)、多媒体信息终端(HB-ODM65-L)，共1批。送货：南宁市琅东校区，成交后7个工作日内。</td>
+  <td><a href="https://www.yfbzb.com/inviteBid/detail/20260630_609984798.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-29</td>
+  <td class="title-cell">北京市怀柔区庙城学校智慧体育设备购置成交公告 🔶补录</td>
+  <td>北京市怀柔区庙城学校</td>
+  <td><span class="tag tag-中标公告">成交公告</span></td>
+  <td class="amount">¥91.77万</td>
+  <td>北京</td>
+  <td class="source-tag">百度寻标宝/采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>竞争性谈判成交</b>。预算¥92.498万→成交¥91.77万（节资率0.79%）。项目编号：ZYHH20260603X，6/23发招标、6/29开标。供应商信息需查看原文。</td>
+  <td><a href="https://xunbiaobao.baidu.com/biddingDetail?id=c162d4628c251ec6acc2b974c75c9181dbb43b2b" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-26</td>
+  <td class="title-cell"><b>包头市第九中学外国语学校智慧体育设备采购中标公告 🔶补录</b></td>
+  <td>包头市第九中学外国语学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥68.72万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国教育装备采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>大沩AI（DaweiAI）首入包头</b>。中标：<b>包头市科迪教学仪器设备有限公司</b>（得分89.50），品牌<b>沩工</b>。含AI体育教学系统、短跑/长跑/阳光跑AI、教学一体机3台、测练一体机2台、室内运动小站4台等，含3年技术服务。公告日期：2026-06-26。</td>
+  <td><a href="https://www.oubili.com/09/Info_881846_120_0.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-26</td>
+  <td class="title-cell">天水市麦积区区府路小学智慧作业教室及智慧体育采购项目成交公告 🔶补录</td>
+  <td>天水市麦积区区府路小学</td>
+  <td><span class="tag tag-中标公告">成交公告</span></td>
+  <td class="amount">¥29.80万</td>
+  <td>甘肃</td>
+  <td class="source-tag">甘肃经济信息网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧作业（青鹿）+<b>智慧体育（海康威视）</b>组合采购。体育部分约¥16.89万：校端智慧体育云平台、50米跑检测相机、50米起点一体机、检测一体机等。海康威视智慧体育首次落地甘肃小学。成交：天水惠鑫源商贸有限公司。</td>
+  <td><a href="https://www.gsei.com.cn/html/1337/2026-06-26/content-681327.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell">北仑白峰中学AI智慧体育设备采购项目成交公示 🔶补录</td>
+  <td>宁波市北仑区白峰中学</td>
+  <td><span class="tag tag-中标公告">成交公示</span></td>
+  <td class="amount">—</td>
+  <td>浙江</td>
+  <td class="source-tag">采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育设备采购项目成交公示，2026-06-25发布。成交金额和供应商名称需注册登录查看。补录项目。</td>
+  <td><a href="https://www.chinabidding.cn/zbgs/U-vz2qkl-.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-29 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月29日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-28</td>
+  <td class="title-cell"><b>南华县第一中学智慧体育设备采购项目公开招标公告 🆕</b></td>
+  <td>南华县第一中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥95万</td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网云南分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>云南楚雄首次较大规模智慧体育招标</b>。采购智慧体育设备一批，含全部设备供货、安装部署、联调测试。专门面向中小微企业。45日历天完成。投标截止：2026-07-20 09:30。项目编号：CXZC2026-G1-00408-YNSL-0034。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260628_26830210.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell"><b>东莞市水乡未来学校AI智慧体育设备采购项目结果公告 ✅追踪完成</b></td>
+  <td>东莞市水乡未来学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥116.85万</td>
+  <td>广东</td>
+  <td class="source-tag">中国政府采购网广东分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>追踪完成</b>。中标：<b>广东一晨科技有限公司</b>（品牌<b>融梦科技+希沃</b>），综合得分77.60分。预算¥122.43万，节资率4.55%。4家投标。自6/2招标以来历时23天完成。项目编号：441901-2026-03609。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260625_26810179.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-26</td>
+  <td class="title-cell"><b>鄂尔多斯生态环境职业学院AI体质健康测试设备及智慧操场建设项目中标公告 ⭐</b></td>
+  <td>鄂尔多斯生态环境职业学院</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥132.9万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网内蒙古分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>全品类AI体测</b>。中标：<b>内蒙古辰航体育科技有限公司</b>，品牌<b>"赛康精益"</b>（SK系列）。含AI立定跳远/引体向上/身高体重/肺活量/坐位体前屈/仰卧起坐/短跑/中长跑+阳光跑共12类设备。最低评标价法。预算¥137万。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/cjgg/202606/t20260626_26820591.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-26</td>
+  <td class="title-cell"><b>焦作市第十七中学学生体质健康监测仪器项目成交公告 ✅追踪完成</b></td>
+  <td>焦作市第十七中学</td>
+  <td><span class="tag tag-中标公告">成交公告</span></td>
+  <td class="amount">¥47.93万</td>
+  <td>河南</td>
+  <td class="source-tag">中国政府采购网河南分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>追踪完成</b>。成交：<b>焦作市国资控股教育投资有限公司</b>（国资背景），评审得分91.67分。竞争性磋商，3家投标。自6/12招标以来历时14天完成。项目编号：山财磋商采购-2026-8。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/cjgg/202606/t20260626_26822430.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-26</td>
+  <td class="title-cell">陕西省商业学校AI体测设备购置项目成交结果公告</td>
+  <td>陕西省商业学校</td>
+  <td><span class="tag tag-中标公告">成交公告</span></td>
+  <td class="amount">未公开</td>
+  <td>陕西</td>
+  <td class="source-tag">陕西采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI体测设备购置项目竞争性磋商成交结果公告，2026年6月26日发布。具体成交金额和供应商信息需查看原文（网站访问受限）。</td>
+  <td><a href="http://bulletin.sntba.com/resultBulletin/2026-06-26/2216707.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell">茂名市愉园小学AI智慧体育采购项目社会招标代理机构遴选结果公示</td>
+  <td>茂名市愉园小学</td>
+  <td><span class="tag tag-中标公告">遴选公示</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育采购项目招标代理机构遴选完成，公示期6/25-6/29。继官山学校之后茂名市第二个AI智慧体育项目即将进入正式设备采购阶段。</td>
+  <td><a href="https://mp.weixin.qq.com/s?__biz=MzIwNTU5Mjk2NA==&mid=2247619467&idx=3" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-27</td>
+  <td class="title-cell">彭阳县教育体育局2026年学前教育普及普惠补短板（智慧管理）教学设施设备政府采购项目中标公告 🔷辅助</td>
+  <td>彭阳县教育体育局</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥111.12万</td>
+  <td>宁夏</td>
+  <td class="source-tag">中国政府采购网宁夏分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">🔷<b>辅助记录</b>（非智慧体育专项）。学前教育智慧管理设施设备，含AI晨检机器人（沃柯雷克）、AI教育机器人（济南爱维）等。中标：<b>固原宏昕电子科技有限公司</b>，得分82.60分。可作为智慧校园建设趋势参考。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260627_26828454.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-27 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月27日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell"><b>昌吉学院大学生体质健康测试仪器采购公开招标公告 ⭐</b></td>
+  <td>昌吉学院</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount amount-large">¥197.02万</td>
+  <td>新疆</td>
+  <td class="source-tag">新疆政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>新疆首次百万级智慧体测</b>⭐。采购AI智慧数据管理平台、移动端程序、AI800/1000米跑测试系统、AI50米跑测试系统、AI立定跳远测试一体机、AI身高体重测试系统、AI引体向上测试一体机等。专门面向小微企业。60日历天完成。投标截止：2026-07-15 11:00。项目编号：TH2026-ZH0116。</td>
+  <td><a href="https://www.baogao.com/zhaobiao/a2198477-3e54-41f7-9fce-6d2c26af3704.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-24</td>
+  <td class="title-cell"><b>东南大学体育系智能体质健康测试系统及设备采购中标公告 ⭐</b></td>
+  <td>东南大学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥89.57万</td>
+  <td>江苏</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>运营商跨界智慧体育</b>。中标：<b>中移系统集成有限公司</b>（中国移动旗下），品牌<b>"一视"</b>（YSP-SLJ-X100）。主要标的：AI立定跳远测试仪8套（¥18,800/套）等智能体测设备。评审得分83.9分。公告日期：2026-06-24。项目编号：SEU-ZB-260223。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/zygg/zbgg/202606/t20260624_26801741.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell">贵州文化旅游职业学院体质测试智能化器材采购项目中标公告</td>
+  <td>贵州文化旅游职业学院</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥68.5万</td>
+  <td>贵州</td>
+  <td class="source-tag">中国政府采购网贵州分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">体质测试智能化器材采购。中标：<b>贵阳微宏欣科技经营部</b>（本地企业），评审得分95.36分（竞争性磋商）。定标日期2026-06-25。项目编号：GZTM-2026-167。品牌型号未公开。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260625_26812118.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">深圳明德实验学校（集团）香蜜校区AI智慧体育装饰工程项目中标</td>
+  <td>深圳明德实验学校（集团）</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥77.3万</td>
+  <td>广东</td>
+  <td class="source-tag">深圳明德实验学校官网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育<b>装饰工程</b>项目（空间装修配套而非设备采购）。中标：<b>中长建设工程有限公司</b>，预算¥78.42万。综合评分90.60分。60日施工期。项目编号：FTZXDL-2026-00806。</td>
+  <td><a href="https://mdsy.szftedu.cn/xwgk/tzgg/202606/t20260623_177011.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell">赣州市南康区第一中学音乐教室、美术教室及智慧体育设施设备采购方案征集</td>
+  <td>赣州市南康区第一中学</td>
+  <td><span class="tag tag-征集公告">征集公告</span></td>
+  <td class="amount">未公开</td>
+  <td>江西</td>
+  <td class="source-tag">采招网/乙方宝</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">音乐教室+美术教室+<b>智慧体育设施设备</b>采购方案征集。方案截止：2026-07-06 17:30。代理：江西斯诺招标。6月4日已发布采购意向。</td>
+  <td>—</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">信丰县花园小学智慧体育角制作采购服务竞价公告</td>
+  <td>信丰县花园小学</td>
+  <td><span class="tag tag-竞价公告">竞价公告</span></td>
+  <td class="amount">未公开</td>
+  <td>江西</td>
+  <td class="source-tag">采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育角制作采购服务，竞价方式，报价截止2026-06-25。小型项目。</td>
+  <td><a href="https://www.chinabidding.cn/zbgg/U-vzJEUf6.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell">深圳市龙岗区布吉街道中心小学智慧体育角设备采购项目中标结果公示</td>
+  <td>深圳市龙岗区布吉街道中心小学</td>
+  <td><span class="tag tag-中标公告">中标公示</span></td>
+  <td class="amount">未公开</td>
+  <td>广东</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育角设备采购项目中标结果公示，6月23日微信公众号发布。中标金额和供应商未公开。</td>
+  <td>—</td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-24</td>
+  <td class="title-cell">东莞市水乡未来学校AI实验室设备采购项目 🔷关联</td>
+  <td>东莞市水乡未来学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥108.47万</td>
+  <td>广东</td>
+  <td class="source-tag">中国政府采购网广东分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">🔷<b>关联项目</b>（非智慧体育专项，同校AI实验室设备）。与前期AI智慧体育设备（¥122.43万，6/24截止）为同校不同采购包。投标截止：2026-07-15 14:30。项目编号：441901-2026-04180。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260624_26805704.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-16</td>
+  <td class="title-cell">深圳北理莫斯科大学附属实验中学智慧体育项目中标公告 🔶补录</td>
+  <td>深圳北理莫斯科大学附属实验中学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥85.68万</td>
+  <td>广东</td>
+  <td class="source-tag">深圳公共资源交易中心</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">🔶6/16发布<b>补录</b>。中标：<b>中昕科创（深圳）科技有限公司</b>，品牌<b>"融梦科技"</b>（RM-AISPORTS-GoPro20）。预算¥90万。主要标的：室外AI体育教学智能机等。项目编号：SZZXCG-2026-00220。</td>
+  <td><a href="https://szggzy.com/xxgk/details.html?contentId=20460748" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-26 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月26日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell"><b>呼和浩特市实验中学智慧体育项目中标公告 ⭐</b></td>
+  <td>呼和浩特市实验中学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥155万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网内蒙古分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>百万级</b>全场景智慧体育项目。中标：<b>内蒙古燃创体育发展有限公司</b>（品牌<b>"爱动力"NZ系列</b>），含智慧体育管理平台、I型体育仓、智慧移动站、智慧操场（短跑+长跑+交互屏）、智能体测仪（身高体重/肺活量/坐位体前屈）、智慧体育屏（多人版）、AI足篮球直播套装等18类设备。公告日期：2026-06-25。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260625_26813146.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-24</td>
+  <td class="title-cell"><b>西乌珠穆沁旗第三小学智慧操场提升项目中标公告 ⭐</b></td>
+  <td>西乌珠穆沁旗第三小学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥115.88万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网内蒙古分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>百万级</b>智慧操场全场景升级。中标：<b>山东同乐教育科技有限公司</b>（品牌<b>"动歌"</b>），含智慧体育平台、50/100/800&1000米跑智慧算法+硬件、引体向上、常态化阳光跑、体测终端（肺活量/身高体重）、多功能体育教学/测试终端、趣味体育锻炼终端等18类设备+系统集成。公告日期：2026-06-24。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260624_26804298.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell"><b>嘉兴市双溪湖实验小学AI智慧体育项目公开招标公告 🆕</b></td>
+  <td>嘉兴市双溪湖实验小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥39万</td>
+  <td>浙江</td>
+  <td class="source-tag">中国政府采购网浙江分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>新建学校AI体育标配</b>。采购智慧体育教学练测评系统、AI50/100米跑算法系统及配套设备、终点成绩显示终端、体育教学机（户外版）、阳光跑标准版AI算法系统。专门面向中小企业。50日历天完成安装调试。投标截止：2026-07-14 09:30。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260625_26815005.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">重庆市荣昌永荣中学校智慧体育学校建设采购AI体育项目</td>
+  <td>重庆市荣昌永荣中学校</td>
+  <td><span class="tag tag-招标公告">网上询价</span></td>
+  <td class="amount">¥5.8万</td>
+  <td>重庆</td>
+  <td class="source-tag">采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育学校建设采购AI体育项目，含其他体育设备设施。网上询价方式，最低价成交原则。项目编号：YRZX202606-02。</td>
+  <td><a href="https://www.chinabidding.cn/qycg/U-vzJo079.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell">高台县第三中学智慧体育运动吧及50m短跑体测设备购置项目合同公告</td>
+  <td>高台县第三中学</td>
+  <td><span class="tag tag-中标公告">合同公告</span></td>
+  <td class="amount">未公开</td>
+  <td>甘肃</td>
+  <td class="source-tag">剑鱼标讯甘肃招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育运动吧及50m短跑体测设备购置项目合同公告，2026年6月25日发布。</td>
+  <td><a href="https://gansu.jianyu360.cn/jybx/20260625_26062464576744.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-25 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月25日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-24</td>
+  <td class="title-cell"><b>曾都区五丰学校智慧体育设备购置（第二次）竞争性磋商公告 🔄</b></td>
+  <td>曾都区五丰学校</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">¥60万</td>
+  <td>湖北</td>
+  <td class="source-tag">湖北省政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>重新招标</b>。首次招标6/23流标，仅隔1天即发布第二次公告。智慧体育设备购置，专门面向中小微企业。响应截止：2026-07-06 15:00。代理：深圳市伟达工程顾问有限公司。</td>
+  <td><a href="https://ccgp-hubei.gov.cn/notice/202606/notice_51224e38375340d5b46256917d070cdb.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">济南先行实验中学2026年智慧体育建设项目公开招标公告 🆕</td>
+  <td>济南先行实验中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥74.86万</td>
+  <td>山东</td>
+  <td class="source-tag">中国政府采购网山东分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">2026年智慧体育建设，含系统及设备安装调试，20个日历日内完成，电子招投标+不见面开标。采购单位为济南新旧动能转换起步区<b>新建创新型实验中学</b>，示范意义明显。投标截止：2026-07-14 09:00。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260622_26791791.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">绍兴市稽山中学学生体质测试设备项目中标公告</td>
+  <td>绍兴市稽山中学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥20.6万</td>
+  <td>浙江</td>
+  <td class="source-tag">绍兴市教育局</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">学生体质测试设备采购公开招标，中标：<b>浙江大沩人工智能科技有限公司</b>（品牌：沩工/DaweiAI），大沩AI近期在智慧体测领域中标频率显著增加。定标日期：2026-06-22。</td>
+  <td><a href="https://jyj.sx.gov.cn/col/col1229352954/art/2026/art_bf33138c25504778a31019ab785e4693.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell"><b>北京市大兴区2026年（4、6、8年级）体质健康测试租赁服务项目中标公告 ⭐</b></td>
+  <td>北京市大兴区教育考试中心</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥252.06万</td>
+  <td>北京</td>
+  <td class="source-tag">北京市政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>区域级</b>体质健康测试租赁服务，覆盖全区4/6/8年级学生。中标：<b>北京太思汀科技发展有限公司</b>，预算257.06万，中标252.06万，节资率约1.95%。体现体质监测从"买设备"到"买服务"转型趋势。</td>
+  <td><a href="http://www.ccgp-beijing.gov.cn/xxgg/qjxxgg/qjzbggs/2026/6/40c365fffa0b479ab33c6c6ab234ba03.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell"><b>呼和浩特市第二中学初中部AI校园智慧操场项目公开招标公告 🆕</b></td>
+  <td>呼和浩特市第二中学初中部</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥93.53万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网内蒙古分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>AI智慧操场全场景建设</b>，含智慧体育教学练测评系统、<b>人脸识别数据驾驶舱</b>、九大运动体测、AI操场吧（50-1500米跑+阳光跑+引体向上）、AI影像运动分析、足球技能测评系统等15类设备/系统，内蒙古中学智慧操场标杆。投标截止：2026-07-17 09:30。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260625_26815429.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-25</td>
+  <td class="title-cell"><b>内蒙古工业大学附属小学设施设备购置项目（含智慧体育）招标公告 🔶补录</b></td>
+  <td>内蒙古工业大学附属小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount amount-large">¥317.6万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网内蒙古分网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>新建校综合性设施购置</b>，共9包（¥317.6万）：智慧教室、智慧图书馆、<b>智慧体育（¥54万）</b>、小学科学、自然科学、创客教室、无人机教室、服装教室、木工教室。合同签订后45日历天交付。投标截止：2026-07-16 09:30。</td>
+  <td><a href="http://www.skysee.cn/Article/Detail/83469" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-24 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月24日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-24</td>
+  <td class="title-cell">成都市双流区怡心第一实验学校智慧体育设施设备采购项目公开招标公告</td>
+  <td>成都市双流区怡心第一实验学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥60万</td>
+  <td>四川</td>
+  <td class="source-tag">成都市双流区政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设施设备采购，含智能体测设备、AI体育测试系统、阳光跑运动监测、数据管理平台等。项目编号：N5101162026000280。投标截止：2026-07-14 10:30。</td>
+  <td><a href="https://sc.bidcenter.com.cn/gys/detail-3436291.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-24</td>
+  <td class="title-cell"><b>济南市历城第二中学AI智慧体育项目公开招标公告</b></td>
+  <td>济南市历城第二中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥152.07万</td>
+  <td>山东</td>
+  <td class="source-tag">中国招标投标公共服务平台</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育采购，含<b>AI体测设备、智能监测系统、数据管理平台、阳光跑</b>等。项目编号：SDWS-GK-2026-046。投标截止：2026-07-14 09:00。</td>
+  <td><a href="https://www.zsxtzb.cn/class1/999508.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell"><b>潍坊市坊子区教育和体育局3-15岁儿童青少年体质监测及运动促进健康服务项目单一来源采购公示</b></td>
+  <td>潍坊市坊子区教育和体育局</td>
+  <td><span class="tag tag-采购意向">单一来源公示</span></td>
+  <td class="amount">¥194.12万</td>
+  <td>山东</td>
+  <td class="source-tag">潍坊市公共资源交易中心</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>区域级</b>3-15岁儿童青少年体质监测及运动促进健康服务，含智能体测设备部署、数据采集与运动健康促进服务。项目编号：SDGP370704000202602000028。区教体局主导。</td>
+  <td><a href="http://www.caizhaowang.com/news-1-53e5aeb26f3b5cd96ce5bb4e69ef7094bf209d8830c36448.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell">关于征集两校区智慧体育设备采购方案的公告</td>
+  <td>福州某中学（两校区）</td>
+  <td><span class="tag tag-征集公告">方案征集</span></td>
+  <td class="amount">¥35万</td>
+  <td>福建</td>
+  <td class="source-tag">福建省政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">两校区智慧体育设备采购方案征集，含智能体测器材、AI运动监测系统、数据采集与上传平台。方案提交截止：2026-06-28。</td>
+  <td><a href="https://www.bidizhaobiao.com/" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell" style="color:#a04040"><b>曾都区五丰学校智慧体育设备购置终止公告（流标）</b></td>
+  <td>曾都区五丰学校</td>
+  <td><span class="tag tag-中标公告">终止公告</span></td>
+  <td class="amount" style="color:#a04040">流标</td>
+  <td>湖北</td>
+  <td class="source-tag">湖北省政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">项目编号：421302202606000455。原投标截止2026-06-23已终止，将重新组织招标。代理机构：深圳市伟达工程顾问有限公司。</td>
+  <td><a href="http://ccgp-hubei.gov.cn/notice/202606/notice_ffe2d7bfa368404182bdff9e796e7680.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell">康定市教育和体育局康定市部分中小学体育器材采购项目(二次)中标公告</td>
+  <td>康定市教育和体育局</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥47.15万</td>
+  <td>四川</td>
+  <td class="source-tag">四川公共资源交易信息网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">康定市部分中小学体育器材采购项目(二次)，含基础体育器材。项目编号：N5133012026000018。主体偏器材采购，智能化程度较低。</td>
+  <td><a href="https://ggzyjy.sc.gov.cn/jyxx/002002/002002001/20260324/8a69d09f9d10b084019d1ec787546344.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-23 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月23日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-23</td>
+  <td class="title-cell">九江市柴桑区第四小学智慧体育设备采购竞争性谈判公告</td>
+  <td>九江市柴桑区第四小学</td>
+  <td><span class="tag tag-竞争性磋商">竞争性谈判</span></td>
+  <td class="amount">未公开</td>
+  <td>江西</td>
+  <td class="source-tag">江西招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备采购，含智能体测设备、AI体育测试器材、数据管理平台等。项目编号：JXTC2026130116。投标截止：2026-07-06 09:30。</td>
+  <td><a href="https://www.zsztb.cn/class1/314950.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">白城师范学院大学生体质健康测试设备更新、升级公开招标公告</td>
+  <td>白城师范学院</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥67万</td>
+  <td>吉林</td>
+  <td class="source-tag">政采云平台</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">大学生体质健康测试设备更新、升级，含智能体测仪器、数据采集与上传系统、配套软件平台等。项目编号：采购计划-[2026]-09890号-ZKZB-2648017。投标截止：2026-07-14 09:30。</td>
+  <td><a href="https://www.gxxszb.com/Html/2214170.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">2026年广东产互中考体育考试设备技术服务项目询比采购公告</td>
+  <td>联通（广东）产业互联网有限公司</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥11.13万</td>
+  <td>广东</td>
+  <td class="source-tag">中国联通采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">提供2026年广东珠海市中考体育考试全套考试设备、智能化测试系统、现场技术支持等服务，最高限价11.13万元（不含税），服务期至2026年中考结束。</td>
+  <td><a href="https://www.yfbzb.com/inviteBid/detail/20260622_607240680.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">重庆市工艺美术学校校园阳光体育运动AI智能监测设备及采购网上询价公告</td>
+  <td>重庆市工艺美术学校</td>
+  <td><span class="tag tag-竞价公告">网上询价</span></td>
+  <td class="amount">未公开</td>
+  <td>重庆</td>
+  <td class="source-tag">小额采购数智服务平台</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">校园阳光体育运动AI智能监测设备及采购，含AI运动姿态识别、智能监测系统、阳光跑数据采集设备等。项目编号：Z26A04221。</td>
+  <td><a href="https://chongqing.zhaobiao.cn/bidding_v_6a0ea18bbeb88ef1544734f2f5290502.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell"><b>云南交通职业技术学院-学生体质健康促进中心项目采购意向</b></td>
+  <td>云南交通职业技术学院</td>
+  <td><span class="tag tag-采购意向">采购意向</span></td>
+  <td class="amount">¥107万</td>
+  <td>云南</td>
+  <td class="source-tag">乙方宝/千里马招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">建设集<b>智能体测、AI操场、数据管理平台</b>于一体的学生体质健康促进中心。采购含12类设备+数据平台，需满足人脸识别检录、AI自动识别测试、成绩实时上传、阳光跑监测等功能。</td>
+  <td><a href="https://www.yfbzb.com/procurement-intention/detail/page/466778919423705088.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">浦江县丰安高级中学智慧体育设施设备采购项目2026年建设项目合同公告</td>
+  <td>浦江县丰安高级中学有限公司</td>
+  <td><span class="tag tag-中标公告">合同公告</span></td>
+  <td class="amount">¥91.86万</td>
+  <td>浙江</td>
+  <td class="source-tag">浦江县政府公开网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设施设备采购项目，含智能体育设备、AI识别系统、数据管理平台等。供应商：<b>浙江晓扬科技有限公司</b>，合同签订日期2026-03-23，30日历天内完成安装调试。</td>
+  <td><a href="http://www.pj.gov.cn/col/col1229747196/art/2026/art_9c32c779e66c462c9f936eba42b60e5a.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-22 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月22日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-22</td>
+  <td class="title-cell">焦作市第十七中学学生体质健康监测仪器项目招标公告</td>
+  <td>焦作市第十七中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>河南</td>
+  <td class="source-tag">焦作市政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">学生体质健康监测仪器采购，用于实施《国家学生体质健康标准》测试工作，含体质测试设备及相关服务。投标截止：2026-06-26 08:30。</td>
+  <td><a href="https://zfcg.henan.gov.cn/jiaozuo/content?infoId=1969527" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-21 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月21日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-21</td>
+  <td class="title-cell">同江市第一中学校园AI智慧体育设备采购招标公告</td>
+  <td>同江第一中学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥50万</td>
+  <td>黑龙江</td>
+  <td class="source-tag">中国政府采购招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">采购校园AI智能信息化设备1套，含AI智慧体育设备，用于提升学校体育教学智能化水平。项目编号：[230881]STXMGL[GK]20260007。</td>
+  <td><a href="https://www.gxxszb.com/Html/2205703.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-18 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月18日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-18</td>
+  <td class="title-cell"><b>东莞市2026年智能体测项目系统技术服务采购项目中标公告</b></td>
+  <td>东莞市招生考试办公室</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥659.6万</td>
+  <td>广东</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">为全市41所考点学校配置智能体测设备，品牌：<b>智教云科技</b>。含：智慧校园体育与健康管理平台配套41套、体视一体机41套、坐位体前屈检测设备164套、AI视觉长跑/短跑/仰卧起坐/立定跳远/引体向上检测系统共328套、集成服务41套。中标：<b>好滴信息科技（广州）有限公司</b>，综合得分94.57分。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260618_26779684.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-17 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月17日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-17</td>
+  <td class="title-cell"><b>佳木斯大学"智能体测室"及"AI阳光跑"项目设备中标公告</b></td>
+  <td>佳木斯大学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥59.8万</td>
+  <td>黑龙江</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">建设智能体测室及AI阳光跑项目，含智能体测设备、AI识别系统、数据管理平台等。中标：<b>黑龙江领先智能化工程有限公司</b>。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/cjgg/202606/t20260617_26763289.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-17</td>
+  <td class="title-cell">苏尼特左旗第一小学第一小学智慧操场提升项目中标公告</td>
+  <td>苏尼特左旗第一小学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧操场提升项目，含AI体育设备、智慧操场系统等，提升学校体育活动智能化水平。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260617_26765049.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-17</td>
+  <td class="title-cell">达州市第一中学校学生体质健康测试体测体训设备中标公告</td>
+  <td>达州市第一中学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥169.88万</td>
+  <td>四川</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI体测设备全套：室外体锻仓5台/室内测训机10台/长跑测试机/球类专项测试仪/数据平台等，中标：<b>中国广电四川网络股份有限公司达川区分公司</b>，品牌HiteVision（鸿合），得分99.44（接近满分）。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260617_26766042.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-17</td>
+  <td class="title-cell">吐鲁番市第六小学2026年义务教育薄弱环节改善与能力提升项目-智慧体育设备采购（二次）招标公告</td>
+  <td>吐鲁番市第六小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥53万</td>
+  <td>新疆</td>
+  <td class="source-tag">新疆公共资源交易网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备1批，改善义务教育薄弱环节，政采云平台投标。7/8截止。</td>
+  <td><a href="https://ggzy.xinjiang.gov.cn/xinjiangggzy_new/jyxx/001004/001004003/20260617/1101000034935225.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-16 新增 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月16日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-16</td>
+  <td class="title-cell">银川市金凤区教育局2026年中小学智慧黑板及智慧体育设备采购项目一标段中标公告</td>
+  <td>银川市金凤区教育局</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥282.94万</td>
+  <td>宁夏</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧黑板91台+课堂智能反馈系统+AI分析终端+智慧体育设备等，总预算566.4万（本标段主要部分），中标：<b>中移系统集成有限公司（中国移动）</b>，品牌希沃。运营商首次进入宁夏智慧体育市场。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260616_26762428.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-16</td>
+  <td class="title-cell">河北体育学院2026年智慧教学场景建设设备购置项目招标公告</td>
+  <td>河北体育学院</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥57.8万</td>
+  <td>河北</td>
+  <td class="source-tag">河北体育学院官网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧教学录播设备1套，"双盲"评审，合同签订后30日内交付。7/7截止。</td>
+  <td><a href="http://www.hepec.edu.cn/col/1498528808703/2026/06/16/1781600451461.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-16</td>
+  <td class="title-cell"><s>成都市少城小学AI智慧体育运动项目比选公告</s> ⛔已废标</td>
+  <td>成都市少城小学</td>
+  <td><span class="tag tag-竞争性磋商">已废标</span></td>
+  <td class="amount">—</td>
+  <td>四川</td>
+  <td class="source-tag">阳光慧采平台</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育运动项目公开比选，6/23发布废标/终止公告（有效比选申请人不足）。</td>
+  <td><a href="https://www.ezb.net.cn/html/elebiding/zhaobiaocaigou/zhaobiaogonggao/2066815397030469633.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-16</td>
+  <td class="title-cell">宁波市鄞江中学智慧体育建设项目招标公告</td>
+  <td>宁波市鄞江中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>浙江</td>
+  <td class="source-tag">采招网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育建设项目公开招标，代理机构：宁波名诚招标代理有限公司。</td>
+  <td><a href="https://www.bidcenter.com.cn/news-425284665-1.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<tr>
+  <td style="white-space:nowrap">2026-06-16</td>
+  <td class="title-cell">深圳市龙岗区布吉街道中心小学智慧体育角设备采购项目招标公告</td>
+  <td>深圳市龙岗区布吉街道中心小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">校园智慧体育角设备采购，包含AI体育锻炼设备、智慧体育数据平台等。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=深圳市龙岗区布吉街道中心小学智慧体育角" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-15 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月15日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell">西固区中小学智慧体育设备采购项目中标（成交）结果公告</td>
+  <td>兰州市西固区教育局</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥104.87万</td>
+  <td>甘肃</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">中小学智慧体育设备一批，中标供应商：<b>江苏博凯教育装备有限公司</b>。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260615_26749296.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell">克拉玛依市第十小学智慧体育设备采购项目竞价公告</td>
+  <td>克拉玛依市第十小学</td>
+  <td><span class="tag tag-竞价公告">竞价公告</span></td>
+  <td class="amount">—</td>
+  <td>新疆</td>
+  <td class="source-tag">招标采购导航网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育服务平台、国家体测平台数据对接功能等设备采购。</td>
+  <td><a href="https://www.okcis.cn/20260615-n2-20260615204824819972.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell"><b>鄂尔多斯生态环境职业学院AI体质健康测试设备及智慧操场建设项目竞争性谈判公告</b></td>
+  <td>鄂尔多斯生态环境职业学院</td>
+  <td><span class="tag tag-竞争性磋商">竞争性谈判</span></td>
+  <td class="amount">¥137万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI立定跳远/引体向上/身高体重/肺活量/坐位体前屈/仰卧起坐/短跑/中长跑测试仪等12个品目+数据平台+塑胶运动地板，全品类AI体测覆盖。6/26截止。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/jzxtpgg/202606/t20260615_26749448.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell">柏景湾学校（武汉临空港外国语学校）AI智慧体育采购项目招标公告</td>
+  <td>武汉市东西湖区柏景湾学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥167.94万</td>
+  <td>湖北</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育器材+心理咨询室器材，专门面向中小微企业，30个日历天内完成。7/7截止。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260615_26753735.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell">敦煌市第五小学智慧操场部分设备采购项目成交公告</td>
+  <td>敦煌市第五小学</td>
+  <td><span class="tag tag-中标公告">成交公告</span></td>
+  <td class="amount">¥10.73万</td>
+  <td>甘肃</td>
+  <td class="source-tag">千里马招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧操场部分设备采购，邀请招标方式，含体育数据管理、课程/教学资源/赛事管理等模块。</td>
+  <td><a href="https://www.qianlima.com/bid-605844312.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-15</td>
+  <td class="title-cell">敦煌市七里镇中学智慧体育设备购置项目招标公告</td>
+  <td>敦煌市七里镇中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>甘肃</td>
+  <td class="source-tag">中国采购与招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">小学智慧操场部分设备采购配置，含体育数据管理/课程管理/赛事管理等系统。</td>
+  <td><a href="https://www.chinabidding.cn/zbgg/U-vzJ5PYC.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-14 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月14日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-14</td>
+  <td class="title-cell">曲靖市第二小学校园智慧体育设施设备采购项目招标公告</td>
+  <td>曲靖市第二小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥183万</td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">校园智慧体育设施设备1批，核心产品：室外AI体育教学智能终端，30天履约期。7/6截止。</td>
+  <td><a href="https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260614_26746958.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-13 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月13日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-13</td>
+  <td class="title-cell">2026年乌兰县第一中学智慧体育设备采购项目中标（成交）结果公告</td>
+  <td>乌兰县第一中学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥94万</td>
+  <td>青海</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备采购公开招标，中标供应商：<b>青海特麟商贸有限公司</b>，中标金额94万元。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260613_26745604.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-12 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月12日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-12</td>
+  <td class="title-cell">焦作市第十七中学学生体质健康监测仪器项目竞争性磋商公告</td>
+  <td>焦作市第十七中学</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">未公开</td>
+  <td>河南</td>
+  <td class="source-tag">焦作市政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">学生体质健康监测仪器采购，用于实施《国家学生体质健康标准》测试工作，含体质测试设备及相关服务。投标截止：2026-06-26。</td>
+  <td><a href="https://zfcg.henan.gov.cn/jiaozuo/content?infoId=1969527" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-12</td>
+  <td class="title-cell">深圳市南山区前海学校AI智慧体育设备采购项目中标公告</td>
+  <td>深圳市南山区前海学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥67.85万</td>
+  <td>广东</td>
+  <td class="source-tag">深圳南山政府在线</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育设备1项，3家投标，中标：<b>深圳市圣之慧教育科技有限公司</b>，综合得分95.90分。</td>
+  <td><a href="http://www.szns.gov.cn/bsfw/ztfw/jypx/tzgg28/zbzbgg/content/post_12839003.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-12</td>
+  <td class="title-cell">贺兰县第二小学AI智慧体育设备采购项目招标公告</td>
+  <td>贺兰县第二小学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥45万</td>
+  <td>宁夏</td>
+  <td class="source-tag">宁夏招标投标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">室外AI体育教学机/AI锻炼智能终端/AI短跑50/100米测试机/AI智慧体育管理平台等8类设备，面向中小微企业。</td>
+  <td><a href="https://nxzbtb.com.cn/contents/XXGG/GCJS/2026/06/2c9080789759800a019ebb5036f247b2.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-12</td>
+  <td class="title-cell">今日中标结果公告（含体育公园消防设施维护服务采购）</td>
+  <td>—（体育公园项目）</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>四川</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">2026年体育公园消防设施维护服务采购，中标单位：华龙智腾智慧安全技术服务（成都）有限公司。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=今日中标结果公告" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-11 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月11日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-11</td>
+  <td class="title-cell">沙湾市第三中学智慧体育设备采购项目中标公告</td>
+  <td>沙湾市第三中学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥82.8万</td>
+  <td>新疆</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育教学练测评系统/体育家庭作业系统/数据驾驶舱等，中标：<b>中国电信股份有限公司塔城分公司</b>，品牌沩工（DaweiAI）。运营商首次中标新疆智慧体育项目。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260611_26735528.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-11</td>
+  <td class="title-cell">曾都区五丰学校智慧体育设备购置项目竞争性磋商公告</td>
+  <td>随州市曾都区五丰学校</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">¥60万</td>
+  <td>湖北</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备购置，专门面向中小微企业，财政性资金。6/23截止，倒计时5天。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202606/t20260611_26729457.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-11</td>
+  <td class="title-cell"><b>盐城市教育局8所市直学校智慧体育设施项目采购意向</b></td>
+  <td>盐城市教育局</td>
+  <td><span class="tag tag-采购意向">采购意向</span></td>
+  <td class="amount">¥200万</td>
+  <td>江苏</td>
+  <td class="source-tag">盐城市财政局</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">盐城8所市直学校（含一小/串场河/新都路/聚亨路/盐渎/初中/鹿鸣路/康居路）配置智慧体育设施设备。预计7月采购。</td>
+  <td><a href="http://czj.yancheng.gov.cn/art/2026/6/11/art_24544_31197.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-11</td>
+  <td class="title-cell">曲靖师范学院附属小学智慧体育改造提升项目中标公告</td>
+  <td>曲靖师范学院附属小学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥59.6万</td>
+  <td>云南</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育系统一套，含AI短跑/长跑智能机、体测智能机等。中标：<b>上海领感科技有限公司</b>，得分92.6。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260611_26734766.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-11</td>
+  <td class="title-cell">深圳市第七高级中学AI智慧体育空间建设项目采购意向征集</td>
+  <td>深圳市第七高级中学</td>
+  <td><span class="tag tag-采购意向">采购意向</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">招标采购导航网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育空间建设，含智慧操场、AI体测设备等采购意向。</td>
+  <td><a href="https://www.okcis.cn/20260611-n2-20260611154017084029.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-10 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月10日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-10</td>
+  <td class="title-cell">智慧体育硬件设备采购的公开招标公告</td>
+  <td>上海市长宁区教育局</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥177.4万</td>
+  <td>上海</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">6台AI体育教学测试屏、6台AI测训一体机、8台AI体育锻炼屏、12台AI体测屏等，推动体育教育数字化转型。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260610_26727311.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-10</td>
+  <td class="title-cell">茂名市官山学校AI智慧体育设备采购项目社会招标代理机构中标结果公示</td>
+  <td>茂名市官山学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">招标代理机构遴选结果：龙腾国信工程咨询有限公司中标，为后续设备采购招标做准备。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=茂名市官山学校AI智慧体育设备采购项目中标结果公示" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-09 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月9日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-09</td>
+  <td class="title-cell">兰州财经大学AI智慧体测建设项目招标公告</td>
+  <td>兰州财经大学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥168.58万</td>
+  <td>甘肃</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI自助体测系统、数据平台、引体向上/仰卧起坐/坐位体前屈/立定跳远/肺活量等AI测试设备、阳光跑系统等全套体测建设。专门面向中小企业。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260609_26718138.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-08 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月8日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-08</td>
+  <td class="title-cell">甘肃医学院智慧体测中心建设项目中标公告</td>
+  <td>甘肃医学院</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥119万</td>
+  <td>甘肃</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体测中心建设，采购智慧体测设备一批，中标：<b>甘肃健隆达光电科技有限责任公司</b>，评审得分90.84分。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202606/t20260608_26709524.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-08</td>
+  <td class="title-cell">沥海街道中心小学学校智慧体育系统项目中标公告</td>
+  <td>绍兴市越城区沥海街道中心小学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>浙江</td>
+  <td class="source-tag">越城区政府网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">学校智慧体育系统公开招标，2026年5月15日公告，2026年6月5日定标。</td>
+  <td><a href="https://www.sxyc.gov.cn/col/col1559790/art/2026/art_5fa0776ae954432ea6796cf7c67682fc.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-05 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月5日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-05</td>
+  <td class="title-cell">成都市温江区政通小学校智慧AI体育校园建设采购项目竞争性磋商公告</td>
+  <td>成都市温江区政通小学校</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">¥26万</td>
+  <td>四川</td>
+  <td class="source-tag">广西招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧AI体育校园建设，面向中小微企业，财政性资金。6/25截止。</td>
+  <td><a href="https://www.gxxszb.com/Html/2151196.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-05</td>
+  <td class="title-cell">赣州中学智慧体育设备采购项目方案征集公告（第三次）</td>
+  <td>赣州中学</td>
+  <td><span class="tag tag-征集公告">征集公告</span></td>
+  <td class="amount">—</td>
+  <td>江西</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">第三次征集智慧体育设备采购项目方案，为后续招标做准备。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=赣州中学智慧体育设备采购项目方案" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-04 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月4日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-04</td>
+  <td class="title-cell">甘德县民族寄宿制中学AI智慧体育设备采购项目</td>
+  <td>甘德县民族寄宿制中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>青海</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育设备采购项目公开招标，中标后无故弃标承担合同总价30%违约金。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=甘德县民族寄宿制中学AI智慧体育设备采购项目" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-06-02 ====== -->
+<tr class="date-sep"><td colspan="9">2026年6月2日</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-02</td>
+  <td class="title-cell">东莞市水乡未来学校AI智慧体育设备采购项目招标公告</td>
+  <td>东莞市水乡未来学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">¥122.43万</td>
+  <td>广东</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育设备一批，30个自然日内完成供货安装调试，公开招标。</td>
+  <td><a href="https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260602_26672173.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-06-02</td>
+  <td class="title-cell">茂名市官山学校AI智慧体育采购项目社会招标代理机构遴选公告</td>
+  <td>茂名市官山学校</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">公开征集遴选AI智慧体育采购项目社会招标代理机构。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=茂名市官山学校AI智慧体育采购项目社会招标代理机构" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-05-28 ====== -->
+<tr class="date-sep"><td colspan="9">2026年5月</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-05-28</td>
+  <td class="title-cell"><b>东莞市2026年智能体测项目系统技术服务采购项目招标公告</b></td>
+  <td>东莞市招生考试办公室</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount amount-large">¥1,230万</td>
+  <td>广东</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)"><b>中考智能体测系统技术服务</b>：含智慧校园体育与健康管理平台41套、体视一体机41套、AI视觉长跑/短跑/仰卧起坐/立定跳远/引体向上检测设备等。专门面向中小企业。</td>
+  <td><a href="http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202605/t20260528_26649967.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-05-23</td>
+  <td class="title-cell">智慧体育设备采购项目中标（成交）结果公告</td>
+  <td>—</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>—</td>
+  <td class="source-tag">教育装备采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设备采购项目，含AI人工智能平台系统、体育设备等。</td>
+  <td><a href="https://www.caigou.com.cn/zfcg/20260523102.shtml" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-05-14</td>
+  <td class="title-cell">深圳市福田区红岭教育集团石厦中学运动场AI智慧体育设备采购项目招标公告</td>
+  <td>深圳市福田区红岭教育集团石厦中学</td>
+  <td><span class="tag tag-招标公告">招标公告</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">福田教育网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">运动场AI智慧体育设备采购，2026年5月26日开标。</td>
+  <td><a href="https://www.szftedu.cn/xxgk/cggg/202605/t20260514_173017.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-05-06</td>
+  <td class="title-cell">裕民县中小学智慧体育设备采购项目中标（成交）结果公告</td>
+  <td>裕民县教育局</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>新疆</td>
+  <td class="source-tag">招标采购导航网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">中小学智慧体育设备采购，含AI体测一体机、体育数据平台等。</td>
+  <td><a href="https://www.okcis.cn/20260506-n3-20260506103615463690.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-04 ====== -->
+<tr class="date-sep"><td colspan="9">2026年4月</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-04-29</td>
+  <td class="title-cell">深圳市第三高级中学AI智慧体育系统及设施设备采购（重新招标）中标公告</td>
+  <td>深圳市第三高级中学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>广东</td>
+  <td class="source-tag">招标采购导航网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育系统及设施设备采购重新招标，项目编号：3324-DH2631H2147-D。</td>
+  <td><a href="https://www.bidcenter.com.cn/newssearchyz-20521189.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-04-22</td>
+  <td class="title-cell">高台县2026年教育设备更新项目——高台县职业中专智慧校园及智慧体育建设项目中标公告</td>
+  <td>甘肃省高台县职业中等专业学校</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥95.48万</td>
+  <td>甘肃</td>
+  <td class="source-tag">中国政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">一包：兰州铭轩信息技术有限公司45.6万；二包：通韵信息技术（甘肃）有限责任公司49.88万。含智慧校园及智慧体育建设。</td>
+  <td><a href="https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202604/t20260422_26439906.htm" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-04-10</td>
+  <td class="title-cell">鹤壁市2026年中招体育考试智能化测试项目竞争性磋商公告</td>
+  <td>鹤壁市体育事业发展中心</td>
+  <td><span class="tag tag-竞争性磋商">竞争性磋商</span></td>
+  <td class="amount">¥88.3万</td>
+  <td>河南</td>
+  <td class="source-tag">河南省政府采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">鹤壁市2026年中招体育考试智能化测试服务，竞争性磋商方式采购。</td>
+  <td><a href="https://lysyss.zfcg.henan.gov.cn/cmsweb35rc67w/hebi/rootfiles/2026/04/10/7c627c4522674b678f4c75fdc431717b.pdf" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-04-06</td>
+  <td class="title-cell">济源市玉川路小学智慧体育项目成交公告</td>
+  <td>济源市玉川路小学</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>河南</td>
+  <td class="source-tag">千里马招标网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">济源市玉川路小学智慧体育项目，项目编号：CD-采-2026002。</td>
+  <td><a href="http://www.qianlima.com/gjxx/285242/index_10_2.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-04-04</td>
+  <td class="title-cell">莱芜职业技术学院智慧体测设备采购项目（二次招标）中标公告</td>
+  <td>莱芜职业技术学院</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">¥40.2万</td>
+  <td>山东</td>
+  <td class="source-tag">教育装备采购网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体测设备采购项目二次招标，含平板电脑、存储设备、体育设备、AI平台系统等，中标金额40.2万元。</td>
+  <td><a href="https://www.caigou.com.cn/zfcg/202604048.shtml" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+
+<!-- ====== 2026-03 ====== -->
+<tr class="date-sep"><td colspan="9">2026年3月</td></tr>
+<tr>
+  <td style="white-space:nowrap">2026-03-28</td>
+  <td class="title-cell">体育设施中标情报日报——2026年3月27日</td>
+  <td>—</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount">—</td>
+  <td>全国</td>
+  <td class="source-tag">微信公众号（体博网）</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">汇集各省市公共资源交易平台体育设施中标信息，含智慧体育相关标讯。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=体育设施中标情报日报2026年3月27日" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-03-18</td>
+  <td class="title-cell"><b>国家体育总局信息中心2026年度信息化采购计划（预算超2000万）</b></td>
+  <td>国家体育总局体育信息中心</td>
+  <td><span class="tag tag-采购意向">采购意向</span></td>
+  <td class="amount amount-large">¥2,000万+</td>
+  <td>北京</td>
+  <td class="source-tag">微信公众号（ICT标局-华北）</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">国家体育总局信息中心2026年度信息化采购计划出炉，涵盖信息化基础设施建设与网络安全等。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=国家体育总局信息中心2026年度信息化采购计划" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-03-18</td>
+  <td class="title-cell">特克斯县第六小学2026年4月政府采购意向——智慧体育运动项目建设</td>
+  <td>特克斯县第六小学</td>
+  <td><span class="tag tag-采购意向">采购意向</span></td>
+  <td class="amount">—</td>
+  <td>新疆</td>
+  <td class="source-tag">采招网</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">AI智慧体育教学设备1批，含智慧体育运动项目建设。</td>
+  <td><a href="https://www.bidcenter.com.cn/news-409304532-2.html" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-03-14</td>
+  <td class="title-cell"><b>中文在线&天喻教育2487万中标鄂尔多斯市东胜区教体局数字智慧化设备采购项目</b></td>
+  <td>鄂尔多斯市东胜区教育体育局</td>
+  <td><span class="tag tag-中标公告">中标公告</span></td>
+  <td class="amount amount-large">¥2,487万</td>
+  <td>内蒙古</td>
+  <td class="source-tag">微信公众号（数说123之内蒙古）</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">教育数字智慧化设备采购项目，含智慧体测相关设备，中标：<b>湖北中文在线数字出版有限公司、武汉天喻教育科技有限公司</b>。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=中文在线天喻教育2487万中标鄂尔多斯市东胜区教体局" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-03-13</td>
+  <td class="title-cell">AI智慧操场战事：谁在领跑体育教育的"数智化"时代？（行业分析）</td>
+  <td>—（行业分析）</td>
+  <td><span class="tag tag-采购意向">行业分析</span></td>
+  <td class="amount">—</td>
+  <td>全国</td>
+  <td class="source-tag">微信公众号（尚策智库）</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">深度分析AI智慧操场行业格局，提及福建、江西、广西等地智慧校园招标中标情况。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=AI智慧操场战事谁在领跑体育教育的数智化时代" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+<tr>
+  <td style="white-space:nowrap">2026-03-09</td>
+  <td class="title-cell">石狮市鹏山实验学校智慧体育设施设备采购项目设计方案征集公告</td>
+  <td>石狮市鹏山实验学校</td>
+  <td><span class="tag tag-征集公告">征集公告</span></td>
+  <td class="amount">—</td>
+  <td>福建</td>
+  <td class="source-tag">微信公众号</td>
+  <td style="max-width:260px;font-size:12px;color:var(--text-secondary)">智慧体育设施设备设计方案征集，作为项目招标前期的需求方案及价格征集。</td>
+  <td><a href="https://weixin.sogou.com/weixin?type=2&query=石狮市鹏山实验学校智慧体育设施设备采购项目设计方案" target="_blank" rel="noopener" style="font-size:11px;color:var(--accent);text-decoration:none;white-space:nowrap">查看原文 →</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="footer">
+  <p>数据采集于2026年7月7日，覆盖中国政府采购网（ccgp.gov.cn）、各省市公共资源交易平台、微信公众号、行业媒体等渠道。<br>
+  信息仅供参考，以官方公告原文为准。部分项目金额信息未公开披露。每日早间9:00自动更新。<br>
+  <span style="color:var(--accent)">红色加粗字体为重点关注项目 | 红色金额为百万级以上项目</span></p>
+</div>
+</div>
+
+</body>
+</html>
